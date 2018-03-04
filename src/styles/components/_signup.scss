@@ -1,0 +1,24 @@
+.Signup {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    
+    .header_content {
+        // border: 1px solid red;
+        height: 40%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 20px;
+    }
+    .zip_container {
+        // border: 1px solid green;
+        height: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 20px;
+    }
+}

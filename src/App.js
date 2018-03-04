@@ -1,18 +1,26 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import './styles/main.css';
+import {Switch, Route} from 'react-router-dom';
+import {Menu, Button} from 'semantic-ui-react';
 
-class App extends Component {
+import Signup from './components/Signup';
+
+class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <Menu size="large">
+          <Menu.Item>
+            <img src="https://fillmurray.com/30/30" alt="Attire Squire"/>
+          </Menu.Item>
+          <Menu.Item position="right">
+            <Button primary>Log in</Button>
+          </Menu.Item>
+        </Menu>
+
+        <Switch>
+          <Route exact path="/" component={Signup} />
+        </Switch>
       </div>
     );
   }
