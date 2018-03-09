@@ -1,0 +1,1 @@
+SELECT * FROM available WHERE zip = ANY(string_to_array($1, ',')::int[]);
