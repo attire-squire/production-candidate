@@ -3,6 +3,7 @@ import './styles/main.css';
 import {Switch, Route} from 'react-router-dom';
 import {Menu, Button} from 'semantic-ui-react';
 
+import EnterZip from './components/EnterZip';
 import Signup from './components/Signup';
 
 class App extends React.Component {
@@ -19,7 +20,8 @@ class App extends React.Component {
         </Menu>
 
         <Switch>
-          <Route exact path="/" component={Signup} />
+          <Route exact path="/" component={EnterZip} />
+          <Route path="/signup" component={Signup} />
         </Switch>
       </div>
     );

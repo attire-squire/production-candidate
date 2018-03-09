@@ -1,0 +1,16 @@
+.EnterZip {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    
+    .zip_container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        text-align: center;
+    }
+}
