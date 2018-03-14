@@ -23,3 +23,4 @@ yarn-error.log*
 -e 
 # SASS 
 src/**/*.css
+config.json
