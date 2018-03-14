@@ -8,7 +8,8 @@ CREATE TABLE IF NOT EXISTS customers (
     street_2 VARCHAR(40),
     city VARCHAR(40),
     state_name VARCHAR(15),
-    zip INT
+    zip INT,
+    date_created TIMESTAMP
 );
 
 DROP TABLE IF EXISTS products;
