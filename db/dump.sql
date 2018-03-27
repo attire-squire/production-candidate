@@ -80,3 +80,11 @@ CREATE TABLE IF NOT EXISTS potential (
     state_name VARCHAR(15),
     date_entered TIMESTAMP
 );
+
+DROP TABLE IF EXISTS links;
+CREATE TABLE IF NOT EXISTS links (
+    id SERIAL,
+    customer_id INT,
+    url TEXT,
+    expiration TIMESTAMP
+);

@@ -106,7 +106,7 @@ module.exports = function(app) {
                     e.link = response.data.data.url
                     e.msg = changeTextMsg(req.body.msg, e)
                     return e
-                })
+                }).catch(console.log)
             })
 
             Promise.all(texts).then(results => {
@@ -119,9 +119,20 @@ module.exports = function(app) {
                         res.status(200).send(response)
                     }).catch(console.log)
                 })
-            })
-
-            
+            })        
         })
     })
+
+    app.get('/api/v1/getSchedule/:id', (req, res) => {
+        let url = `http://bit.ly/${req.params.id}`
+
+        app.get('db').get_user_by_url([url]).then(response => {
+            res.status(200).json({
+                success: true,
+                msg: response[0] || null,
+                err: null
+            })
+        })
+    })
+
 }

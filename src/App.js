@@ -5,6 +5,7 @@ import {Menu, Button} from 'semantic-ui-react';
 
 import EnterZip from './components/EnterZip';
 import Signup from './components/Signup';
+import Schedule from './components/Schedule';
 
 class App extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class App extends React.Component {
         <Switch>
           <Route exact path="/" component={EnterZip} />
           <Route path="/signup" component={Signup} />
+          <Route path="/schedule/:id" component={Schedule} />
         </Switch>
       </div>
     );

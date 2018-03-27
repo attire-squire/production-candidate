@@ -5,6 +5,7 @@ const config = require('../config.json')[process.env.NODE_ENV],
            client = require('twilio')(account, token);
 
 module.exports = {
+    // SEND TWILIO BLAST MESSAGE
     sendBlast: (recipients) => {
         /**
          * @param [Array] recipients - [ {msg: 'Hello Andrew, We will.....', phone: '8015027423'} ]
@@ -36,6 +37,7 @@ module.exports = {
                 })
             })
         })
+    },
 
-    }
+    
 }
